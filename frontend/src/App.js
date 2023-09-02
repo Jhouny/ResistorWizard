@@ -3,14 +3,29 @@ import './App.css';
 
 function App() {
     const [resistances, setResistances] = useState([]);
+    function findNearestResistance(inputValue) {
+        const standardResistances = [1, 2.2, 4.7, 10, 22, 47, 100, 220, 470, 1000, 2200, 4700, 10000, 22000, 47000, 100000];
+      
+        const nearestResistance = standardResistances.reduce((closest, resistance) => {
+          return Math.abs(resistance - inputValue) < Math.abs(closest - inputValue) ? resistance : closest;
+        });
+      
+        return nearestResistance;
+      }
 
     const handleInputChange = (index, value) => {
-      setResistances((prevResistances) => {
-          const updatedResistances = [...prevResistances];
-          updatedResistances[index] = value;
-          return updatedResistances;
-      });
-  };
+        const numericValue = parseFloat(value);
+      
+        if (!isNaN(numericValue)) {
+          const nearestResistance = findNearestResistance(numericValue);
+      
+          setResistances((prevResistances) => {
+            const updatedResistances = [...prevResistances];
+            updatedResistances[index] = nearestResistance.toString(); // Converte para string
+            return updatedResistances;
+          });
+        }
+      };
 
     const handleSubmit = async () => {
       console.debug(resistances);
