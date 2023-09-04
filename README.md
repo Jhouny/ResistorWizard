@@ -1,70 +1,56 @@
-# Projeto Oficinas de Integração 1
+# Resistor Wizard Project 🧙‍♂️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This GitHub repository hosts the code for the Resistor Sorter project, developed as part of the Integration Workshops 1 course. The project's primary objective is to create a resistor sorting system that allows users to input resistors and select six resistance values. The system is implemented as a web application, with a frontend built using CSS, HTML, JavaScript, and React. Backend processing is handled on a Raspberry Pi 3B server running Flask, and it involves resistor position localization and color recognition using OpenCV. An AI model, trained by the project team, assists in this process.
 
-In the project directory, you can run:
+## Team Members
 
-### `npm start`
+- **Matheus Passos** - Frontend Development and Project Integration
+- **Jhony Minetto** - Backend Development and Algorithm Design
+- **Ricardo Marthus** - Model Design and Training
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+The frontend of the Resistor Sorter project is responsible for creating the user interface where resistors can be input, and resistance values can be selected. The user interacts with the system through this web-based interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
 
-### `npm run build`
+The backend of the project runs on a Raspberry Pi 3B server and is implemented in Python using the Flask framework. It handles the following tasks:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Resistor position localization
+- Color recognition using OpenCV
+- Communication with the frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### AI Model
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The AI model is a critical component of this project. It has been trained by our dedicated team to recognize resistor colors accurately. This model plays a crucial role in determining the resistance values of the sorted resistors.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run this project locally or on your own Raspberry Pi server, follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone this repository: `git clone https://github.com/yourusername/resistor-sorter.git`
+2. Set up the frontend environment and dependencies.
+   - Navigate to the `frontend` directory.
+   - Install dependencies using npm or yarn: `npm install` or `yarn install`.
+   - Start the frontend application: `npm start` or `yarn start`.
+   
+3. Set up the backend environment and dependencies on your Raspberry Pi.
+   - Navigate to the `backend` directory.
+   - Install Python dependencies: `pip install -r requirements.txt`.
+   - Start the Flask server: `python app.py`.
+   
+4. Ensure the necessary hardware components are connected and configured on your Raspberry Pi for resistor input.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Access the web application in your browser and start using the Resistor Sorter.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributions
 
-## Learn More
+We welcome contributions and improvements from the community. If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request. Your contributions will be greatly appreciated.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to contact us if you have any questions or need assistance with the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy sorting!
