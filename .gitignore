@@ -162,7 +162,12 @@ cython_debug/
 # Backend files to be untracked - training versions, dataset files, inference tests, etc.
 Metal Film Leaded Resistors Dataset/
 Metal-Film-Leaded-Resistor-Color-Bands-4/
+Videos_Resistores/
+Fotos_Resistores/
+Tests/
 *.swp
 *.un~
 .gitignore~
 runs/
+HSV.ipynb
+Oficinas_1_YOLOv8.ipynb
